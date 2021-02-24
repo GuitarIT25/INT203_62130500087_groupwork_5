@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery 087</title>
+    <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+    <!-- Using via Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- https://tailwindcss.com/docs/installation -->
+    <!-- Using Tailwind via CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app" class="">
+        <div class="mx-auto container">
+            <div class="flex items-center justify-end bg-black mr-2 text-white">
+                <p>Photo Gallery | </p>
+                <p>| My favorite {{countmyfar}} / {{sumphoto}}</p>
+            </div>
+            <search-item :boxstate="boxstate" :searchicon="search" @assign-input="assigninput" @showinput-box='showinputbox'></search-item>
+            <view-com :viewstate="viewstate" :viewsrc="viewpath" :closeicon="close" @close-view="closeview"></view-com>
+            <photos-list :likeicon="like" :searching="searching" @show-state="showstate" @open-view="openview" ></photos-list>
+        </div>
+    </div>
+
+    <!-- my main.js -->
+    <script src="main.js"></script>
+</body>
